@@ -7,6 +7,6 @@ jobs:
     steps:
     - name: Install step
       id: install
-      uses: hhoeflin/spack-containers/spack-test-action
+      uses: hhoeflin/spack-containers/spack-test-action@master
       with:
         spec: 'Mona the Octocat'
