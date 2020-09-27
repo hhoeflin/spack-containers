@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  test_neovim:
+    runs-on: ubuntu-latest
+    name: A job to test spack installation of neovim
+    steps:
+    - name: Install step
+      id: install
+      uses: spack-test-action@v1
+      with:
+        spec: 'Mona the Octocat'

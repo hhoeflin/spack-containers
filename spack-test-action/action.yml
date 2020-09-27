@@ -1,0 +1,13 @@
+  # action.yml
+name: 'Spack test'
+description: 'Test that spack programs install correctly'
+inputs:
+  spec:  # id of input
+    description: 'The spec of the program to install'
+    required: true
+    default: None
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.spec }}
