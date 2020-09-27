@@ -1,8 +1,5 @@
 on: [push]
 
-strategy:
-  matrix:
-    spec: [neovim@0.2.0, neovim@0.3.0, neovim@0.4.3, neovim@0.4.4, neovim@master, neovim@stable]
 jobs:
   test_neovim:
     runs-on: ubuntu-latest
@@ -13,3 +10,6 @@ jobs:
       uses: hhoeflin/spack-containers/spack-test-action@master
       with:
         spec: ${{matrix.spec}}
+    strategy:
+      matrix:
+        spec: [neovim@0.2.0, neovim@0.3.0, neovim@0.4.3, neovim@0.4.4, neovim@master, neovim@stable]
