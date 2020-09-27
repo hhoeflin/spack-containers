@@ -1,9 +1,9 @@
 on: [push]
 
+strategy:
+  matrix:
+    spec: [neovim@0.2.0, neovim@0.3.0, neovim@0.4.3, neovim@0.4.4, neovim@master, neovim@stable]
 jobs:
-  strategy:
-    matrix:
-      spec: [neovim@0.2.0, neovim@0.3.0, neovim@0.4.3, neovim@0.4.4, neovim@master, neovim@stable]
   test_neovim:
     runs-on: ubuntu-latest
     name: A job to test spack installation of neovim
